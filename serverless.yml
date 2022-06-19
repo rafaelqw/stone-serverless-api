@@ -20,36 +20,46 @@ provider:
             - dynamodb:GetItem
             - dynamodb:PutItem
           Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:service}-userTable-${sls:stage}
+  apiGateway:
+    apiKeys:
+      - StoneApiKey
 
 functions:
   registerAccess:
     handler: src/functions/counter/registerAccess.handle
     timeout: 30
     events:
-      - httpApi:
+      - http:
           path: /access
           method: POST
+          cors: true
   getAccesses:
     handler: src/functions/counter/getAccesses.handle
     timeout: 30
     events:
-      - httpApi:
+      - http:
           path: /accesses
           method: GET
+          cors: true
   createUser:
     handler: src/functions/users/createUser.handle
     timeout: 30
     events:
-      - httpApi:
+      - http:
           path: /user
           method: POST
+          cors: true
+          private: true
   getUsers:
     handler: src/functions/users/getUser.handle
     timeout: 30
     events:
-      - httpApi:
+      - http:
           path: /user/{id}
           method: GET
+          cors: true
+          private: true
+
 plugins:
   - serverless-plugin-typescript
 
