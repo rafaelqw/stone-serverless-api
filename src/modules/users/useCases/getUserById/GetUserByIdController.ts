@@ -1,6 +1,5 @@
 import { APIGatewayEvent } from "aws-lambda";
 import { AppError } from "../../../../shared/errors/AppError";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
 import { UsersRepository } from "../../infra/dynamodb/repositories/UsersRepository";
 import { GetUserByIdUseCase } from "./GetUserByIdUseCase";
 

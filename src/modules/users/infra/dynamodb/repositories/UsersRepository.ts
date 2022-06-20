@@ -1,4 +1,3 @@
-import * as AWS from 'aws-sdk';
 import * as uuid from 'uuid';
 import { ICreateUserDTO } from "../../../dtos/ICreateUserDTO";
 import { IUsersRepository } from "../../../repositories/IUsersRepository";

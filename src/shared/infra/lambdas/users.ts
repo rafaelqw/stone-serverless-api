@@ -1,4 +1,3 @@
-import { APIGatewayEvent } from "aws-lambda";
 import { CreateUserController } from "../../../modules/users/useCases/createUser/CreateUserController";
 import { GetUserByIdController } from "../../../modules/users/useCases/getUserById/GetUserByIdController";
 
