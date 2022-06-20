@@ -1,0 +1,35 @@
+{
+  "name": "stone-serverless-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1157.0",
+    "axios": "^0.27.2",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.100",
+    "@types/jest": "^28.1.2",
+    "@types/uuid": "^8.3.4",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
+  },
+  "scripts": {
+    "deploy": "serverless deploy --verbose",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelqw/stone-serverless-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelqw/stone-serverless-api/issues"
+  },
+  "homepage": "https://github.com/rafaelqw/stone-serverless-api#readme"
+}
