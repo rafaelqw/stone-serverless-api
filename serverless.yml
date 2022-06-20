@@ -42,7 +42,7 @@ functions:
           method: GET
           cors: true
   createUser:
-    handler: src/functions/users/createUser.handle
+    handler: src/shared/infra/lambdas/users.createUser
     timeout: 30
     events:
       - http:
@@ -51,7 +51,7 @@ functions:
           cors: true
           private: true
   getUsers:
-    handler: src/functions/users/getUser.handle
+    handler: src/shared/infra/lambdas/users.getUserById
     timeout: 30
     events:
       - http:
